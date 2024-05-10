@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors";
 import usersR from "./routes/users-router";
+import { Server } from 'http';
 
-const PORT = 4000;
+const PORT = 4001;
 const HOSTNAME = "http://localhost";
 
 // Instantiate express
@@ -25,6 +26,6 @@ app.use((req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+export const server: Server = app.listen(PORT, () => {
   console.log(`Server running: ${HOSTNAME}:${PORT}`);
 });
