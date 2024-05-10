@@ -1,6 +1,6 @@
 import express from "express";
 import User from "../models/User";
-import usersRepository from "../repositories/users-repository.ts";
+import usersRepository from "../repositories/users-repository";
 
 const usersR = express.Router();
 

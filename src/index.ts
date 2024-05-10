@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import itemsR from "./routes/items-router";
+import usersR from "./routes/users-router";
 
 const PORT = 4000;
 const HOSTNAME = "http://localhost";
@@ -12,7 +12,7 @@ app.use(express.json());
 //app.use(express.urlencoded({ extended: true }));
 
 // Roteamento endereçado e encadeado.
-app.use("/api", itemsR);
+app.use("/api", usersR);
 
 // Default endpoint /
 app.get("/", (req, res) => {
